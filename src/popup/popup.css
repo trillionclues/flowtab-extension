@@ -1,0 +1,249 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background: #fafbfc;
+  color: #222;
+  min-width: 340px;
+  min-height: 520px;
+}
+#ft-container {
+  padding: 0 0 16px 0;
+}
+.ft-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 18px 0 18px;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
+.ft-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2px;
+}
+.ft-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  margin-right: auto;
+}
+.ft-status {
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+  color: #4ade80;
+  margin-right: 10px;
+  gap: 4px;
+}
+.ft-dot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+}
+.ft-settings {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.ft-settings:hover {
+  opacity: 1;
+}
+.ft-window-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px 0 18px;
+  font-size: 0.98em;
+  color: #666;
+}
+.ft-tab-pill {
+  background: #f3f4f6;
+  color: #7b3aed;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 2px 12px;
+  font-size: 0.95em;
+}
+.ft-tabs {
+  display: flex;
+  gap: 2px;
+  margin: 12px 18px 0 18px;
+  border-bottom: 1.5px solid #ececec;
+}
+.ft-tab {
+  background: none;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px 18px 8px 18px;
+  border-radius: 8px 8px 0 0;
+  color: #888;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.ft-tab.active {
+  background: #fff;
+  color: #7b3aed;
+  border-bottom: 2.5px solid #7b3aed;
+}
+.ft-tab:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
+.ft-save-card {
+  background: #fff;
+  margin: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60, 60, 60, 0.04);
+  padding: 18px 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ft-save-title {
+  font-weight: 500;
+  color: #7b3aed;
+  margin-bottom: 2px;
+}
+#groupName {
+  padding: 8px 12px;
+  border: 1.2px solid #ececec;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 6px;
+  background: #fafbfc;
+  transition: border 0.2s;
+}
+#groupName:focus {
+  border: 1.2px solid #7b3aed;
+}
+#saveGroup {
+  background: #7b3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+#saveGroup:hover {
+  background: #5f2eea;
+}
+.ft-saved-list {
+  margin: 0 18px;
+}
+.ft-saved-title {
+  font-size: 1.05em;
+  font-weight: 500;
+  color: #888;
+  margin: 18px 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#groupsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ft-session-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(60, 60, 60, 0.04);
+  padding: 14px 14px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+}
+.ft-session-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ft-session-title {
+  font-weight: 600;
+  font-size: 1.08em;
+}
+.ft-session-actions {
+  display: flex;
+  gap: 10px;
+}
+.ft-session-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.18s;
+  padding: 0;
+}
+.ft-session-action:hover {
+  opacity: 1;
+}
+.ft-session-meta {
+  font-size: 0.93em;
+  color: #888;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ft-tags {
+  display: flex;
+  gap: 6px;
+  margin: 4px 0 0 0;
+}
+.ft-tag {
+  background: #f3f4f6;
+  color: #7b3aed;
+  font-size: 0.92em;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 500;
+}
+.ft-domains {
+  font-size: 0.92em;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgb(156 163 175);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(107 114 128);
+}

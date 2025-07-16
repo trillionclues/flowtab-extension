@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FlowTab</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="ft-container">
+      <header class="ft-header">
+        <span class="ft-logo">
+          <!-- FolderOpen SVG -->
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="#7B3AED"
+              d="M2 6.75A2.75 2.75 0 0 1 4.75 4h3.19a2.75 2.75 0 0 1 2.1.97l1.13 1.36c.14.17.34.27.56.27h5.52A2.75 2.75 0 0 1 20.75 9v.25H4.75A2.75 2.75 0 0 0 2 12v-5.25Zm0 6.25A2.75 2.75 0 0 1 4.75 10h16.5c.41 0 .75.34.75.75v6.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25v-4.25Z"
+            />
+          </svg>
+        </span>
+        <span class="ft-title">FlowTab</span>
+        <span class="ft-status"><span class="ft-dot"></span>Synced</span>
+        <span class="ft-settings">
+          <!-- Settings SVG -->
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="#888"
+              d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Zm7.43-2.06c.04-.3.07-.61.07-.94s-.03-.64-.07-.94l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.23l-2.49 1a7.03 7.03 0 0 0-1.62-.94l-.38-2.65A.5.5 0 0 0 12 2h-4a.5.5 0 0 0-.5.42l-.38 2.65c-.59.22-1.14.52-1.62.94l-2.49-1a.5.5 0 0 0-.6.23l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.3-.07.61-.07.94s.03.64.07.94l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46a.5.5 0 0 0 .6.23l2.49-1c.48.42 1.03.72 1.62.94l.38 2.65A.5.5 0 0 0 8 22h4a.5.5 0 0 0 .5-.42l.38-2.65c.59-.22 1.14-.52 1.62-.94l2.49 1a.5.5 0 0 0 .6-.23l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65Z"
+            />
+          </svg>
+        </span>
+      </header>
+      <div class="ft-window-info">
+        <span>Current window</span>
+        <span class="ft-tab-pill" id="ft-tab-count">0 tabs open</span>
+      </div>
+      <nav class="ft-tabs">
+        <button class="ft-tab active">Sessions</button>
+        <button class="ft-tab" disabled>Analytics</button>
+        <button class="ft-tab" disabled>Profile</button>
+      </nav>
+      <section class="ft-save-card">
+        <div class="ft-save-title">+ Save Current Session</div>
+        <input type="text" id="groupName" placeholder="Enter session name..." />
+        <button id="saveGroup">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="#fff"
+              d="M6 4a2 2 0 0 0-2 2v14l8-5.333L20 20V6a2 2 0 0 0-2-2H6Z"
+            />
+          </svg>
+          <span id="ft-save-count">Save Tabs</span>
+        </button>
+      </section>
+      <section class="ft-saved-list">
+        <div class="ft-saved-title">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+            <path
+              fill="#888"
+              d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0-6a2 2 0 0 1 2 2v1.09A7.002 7.002 0 0 1 19.91 10H21a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-1.09A7.002 7.002 0 0 1 14 19.91V21a2 2 0 0 1-2 2v0a2 2 0 0 1-2-2v-1.09A7.002 7.002 0 0 1 4.09 14H3a2 2 0 0 1-2-2v0a2 2 0 0 1 2-2h1.09A7.002 7.002 0 0 1 10 4.09V3a2 2 0 0 1 2-2Z"
+            />
+          </svg>
+          Saved Sessions (<span id="ft-saved-count">0</span>)
+        </div>
+        <ul id="groupsList"></ul>
+      </section>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

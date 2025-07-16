@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Flowtab - Browser Session & Bookmark Manager",
+  "version": "1.0.0",
+  "description": "Manage daily browsing sessions save tab groups, auto-tag bookmarks, and track productivity.",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
